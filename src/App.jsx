@@ -6,19 +6,22 @@ import Investors from "./components/Header/Investors";
 import Pack from "./components/Header/Pack";
 import Carears from "./components/Header/Carears";
 import Blog from "./components/Header/Blog";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}>
-        <Route path="video" element={<Video />}/>
-        <Route path="contact" element={<Contact />}/>
-        <Route path="/investors/landing" element={<Investors />}/>
-        <Route path="pack" element={<Pack />}/>
-        <Route path="carears" element={<Carears />}/>
-        <Route path="blog" element={<Blog />}/>
-      </Route>
-    </Routes>
+    <div class="font-body">
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="video" element={<Video />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="/investors/landing" element={<Investors />} />
+          <Route path="pack" element={<Pack />} />
+          <Route path="carears" element={<Carears />} />
+          <Route path="blog" element={<Blog />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
