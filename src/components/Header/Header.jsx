@@ -1,7 +1,13 @@
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
 
 function Header() {
+  // for changing heroicons
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const handleNavbar = () => {
+    setIsNavOpen((is) => !is);
+  };
+  const hamburgerClass = "w-6 h-2 bg-black transform transition duration-500 ease-in-out";
   // const refValue = useRef();
   // const [hoverLogo, setHoverLogo]=useState(true);
   // const handleHover = () => {
@@ -14,7 +20,24 @@ function Header() {
         alt="logo"
         class="object-contain col-start-2 col-end-4 md:col-end-3 md:w-80"
       />
-      <Bars3Icon class="size-8 md:hidden col-start-9 pr-2" />
+      <div class="col-start-9 flex flex-col gap-y-[7px] md:hidden" onClick={handleNavbar} >
+        <span class={`${hamburgerClass} ${isNavOpen? "-rotate-45 translate-y-[9px]":""}`}></span>
+        <span class={`${hamburgerClass} ${isNavOpen?"opacity-0":""}`}></span>
+        <span class={`${hamburgerClass} ${isNavOpen? "rotate-45 -translate-y-[9px]":""}`}></span>
+      </div>
+
+      {/* changing heroicons in navbar
+      {isNavOpen ? (
+        <XMarkIcon
+          class="size-8 md:hidden col-start-9 pr-2 "
+          onClick={handleNavbar}
+        />
+      ) : (
+        <Bars3Icon
+          class="size-8 md:hidden col-start-9 pr-2"
+          onClick={handleNavbar}
+        />
+      )} */}
       <div class="hidden md:inline-flex md:col-start-3 md:col-span-7 items-center justify-start lg:col-start-5 lg:col-span-5">
         <ul class="text-base text-gray-600 list-none flex flex-row ml-0 gap-x-8 md:gap-x-6 md:text-lg">
           <li class=" hover:text-orange-500">ویدیوها</li>
@@ -30,7 +53,7 @@ function Header() {
           </li>
           <li class=" hover:text-orange-500">وبلاگ</li>
         </ul>
-        <button class="inline-block w-38 h-[38px] mr-6 bg-[#FF5B35] rounded-md">
+        <button class="inline-block w-38 h-[38px] mr-6 bg-[#FF5B35] rounded-md hover:scale-95 transition ease-in duration-300">
           <a href="#" class="text-white text-lg m-6">
             دانلود
             <span>&nbsp;</span>تپسی
