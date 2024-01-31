@@ -1,16 +1,17 @@
+import { useState } from "react";
+import Banner from "../Banner/Banner";
 import Header from "./Header";
 
 function Home() {
+  // for changing heroicons and showing drop down navbar
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const handleNavbar = () => {
+    setIsNavOpen((is) => !is);
+  };
   return (
-    <div>
-      <Header class="sticky"/>
-      <div>
-        <img
-          src="../src/assets/banner.jpg"
-          alt="banner of tapsi"
-          class="h-[74vh] w-full bg-cover"
-        />
-      </div>
+    <div >
+      <Header isNavOpen={isNavOpen} handleNavbar={handleNavbar}/>
+      <Banner isNavOpen={isNavOpen}/>
     </div>
   );
 }
