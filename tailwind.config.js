@@ -25,7 +25,11 @@ export default {
       80 : "20rem",
       120:"30rem",
       },
-    extend: {},
+      boxShadow:{
+        "right": "50px 50px 40px -15px rgba(0,0,0,0.3) " ,
+      },
+    extend: {
+    },
   },
   plugins: [],
 };
