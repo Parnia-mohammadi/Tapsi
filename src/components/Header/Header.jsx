@@ -43,8 +43,10 @@ function Header({isNavOpen, handleNavbar}) {
           onClick={handleNavbar}
         />
       )} */}
-        <div class="hidden md:inline-flex md:col-start-3 md:col-span-7 items-center justify-start lg:col-start-5 lg:col-span-5">
-          <ul class="text-base text-gray-600 list-none flex flex-row ml-0 gap-x-8 hover:*:text-orange-500 md:gap-x-6 md:text-lg">
+        <div class="hidden md:inline-flex md:col-start-3 md:col-span-7 items-center justify-start 
+        lg:col-start-5 lg:col-span-5">
+          <ul class="text-base text-gray-600 list-none flex flex-row ml-0 gap-x-8
+           hover:*:text-orange-500  md:text-lg">
             <li class="">ویدیوها</li>
             <li class="">پشتیبانی</li>
             <li class="">
@@ -58,7 +60,8 @@ function Header({isNavOpen, handleNavbar}) {
             </li>
             <li class="">وبلاگ</li>
           </ul>
-          <button class="inline-block w-38 h-[38px] mr-6 bg-[#FF5B35] rounded-md hover:scale-95 transition ease-in duration-300">
+          <button class="hidden w-38 h-[38px] mr-6 bg-[#FF5B35] rounded-md hover:scale-95
+           transition ease-in duration-300 lg:inline-block">
             <a href="#" class="text-white text-lg m-6">
               دانلود
               <span>&nbsp;</span>تپسی

@@ -9,6 +9,7 @@ export default {
       0:"0px",
       1: "1px",
       2: "2px",
+      3:"0.75rem",
       4: "1rem",
       6: "1.5rem",
       8: "2rem",
