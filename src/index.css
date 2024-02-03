@@ -15,3 +15,8 @@
 	text-rendering: optimizeLegibility;
 	font-display: auto;
 }
+@layer components{
+	.btn-primary{
+		@apply  bg-[#ff5722] py-[13px] px-14 mt-14 rounded-xl text-white text-lg hover:opacity-80
+	}
+}
