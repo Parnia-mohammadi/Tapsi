@@ -15,7 +15,8 @@ export default TapsiService;
 function Service() {
   const [serviceType, setServiceType] = useState(0);
   const intervalRef = useRef();
-  const data = (serviceType>6) ? dataService[serviceType-1]: dataService[serviceType];
+  const data =
+    serviceType > 6 ? dataService[serviceType - 1] : dataService[serviceType];
   //changing service type
   useEffect(() => {
     if (serviceType > 6) {
