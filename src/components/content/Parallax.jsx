@@ -2,7 +2,7 @@ import { parallaxData } from "../../Data/ParallaxData";
 
 function Parallax() {
   return (
-    <div class="w-full h-[50vh] bg-[url(../src/assets/parallax.jpeg)] bg-cover bg-local md:h-[30vh]">
+    <div class="w-full h-[50vh] bg-[url(../src/assets/parallax.jpeg)] bg-cover bg-fixed md:h-[30vh]">
       {/* <img
         src="../src/assets/parallax.jpeg"
         alt="Parallax"
