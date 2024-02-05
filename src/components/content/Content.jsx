@@ -1,5 +1,6 @@
 import { contentData } from "../../Data/ContentData";
 import Benefits from "./Benefits";
+import BlogNews from "./BlogNews";
 import Parallax from "./Parallax";
 
 function Content() {
@@ -19,6 +20,7 @@ function Content() {
       </ContentFile>
       <Parallax/>
       <Benefits/>
+      <BlogNews/>
     </div>
   );
 }
