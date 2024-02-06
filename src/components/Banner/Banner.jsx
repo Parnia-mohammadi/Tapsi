@@ -51,7 +51,7 @@ function Banner({ isNavOpen }) {
       <div
         class={`${
           isNavOpen
-            ? "bg-white w-full absolute top-0 z-20 border-gray-200 border-t-[1px] md:hidden"
+            ? "bg-white w-full absolute top-0 z-20 md:hidden"
             : "hidden"
         }`}
       >
