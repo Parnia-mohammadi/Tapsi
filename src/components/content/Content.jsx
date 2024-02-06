@@ -1,6 +1,7 @@
 import { contentData } from "../../Data/ContentData";
 import Benefits from "./Benefits";
 import BlogNews from "./BlogNews";
+import Iran from "./Iran";
 import Parallax from "./Parallax";
 
 function Content() {
@@ -18,9 +19,10 @@ function Content() {
           />
         </div>
       </ContentFile>
-      <Parallax/>
-      <Benefits/>
-      <BlogNews/>
+      <Parallax />
+      <Benefits />
+      <BlogNews />
+      <Iran/>
     </div>
   );
 }
@@ -34,7 +36,9 @@ function ContentFile({ data, children }) {
           <div
             key={item.key}
             class={`flex ${
-              item.key == 1 ? "md:flex-row-reverse mt-0 pb-[10%]" : "md:flex-row mb-0 pt-[10%] pb-[8%] "
+              item.key == 1
+                ? "md:flex-row-reverse mt-0 pb-[10%]"
+                : "md:flex-row mb-0 pt-[10%] pb-[8%] "
             } flex-col gap-x-20 items-center px-[6%] md:px-[10%] md:justify-between lg:items-start"`}
           >
             <div class="md:w-1/2">
@@ -48,11 +52,13 @@ function ContentFile({ data, children }) {
               </button>
             </div>
             <div class="w-full h-[60vh] mb-0 md:h-[70vh]  my-8 md:my-0 md:w-[45%] relative">
-            <img
+              <img
                 src={item.imgUrl}
                 alt={item.title}
-                class={`w-full max-h-full absolute top-1/2 ${item.key==0?"right-8 md:right-0":""} -translate-y-1/2`}
-            />
+                class={`w-full max-h-full absolute top-1/2 ${
+                  item.key == 0 ? "right-8 md:right-0" : ""
+                } -translate-y-1/2`}
+              />
             </div>
           </div>
         );
@@ -60,10 +66,6 @@ function ContentFile({ data, children }) {
     </div>
   );
 }
-function ContentBanner(){
-return(
-    <div>
-        ContentBanner
-    </div>
-);
+function ContentBanner() {
+  return <div>ContentBanner</div>;
 }
