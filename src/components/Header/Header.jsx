@@ -1,5 +1,6 @@
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { createContext, useContext, useState } from "react";
+import {NavLink} from "react-router-dom";
 
 function Header({isNavOpen, handleNavbar}) {
   const hamburgerClass =
@@ -47,18 +48,24 @@ function Header({isNavOpen, handleNavbar}) {
         lg:col-start-5 lg:col-span-5">
           <ul class="text-base text-gray-600 list-none flex flex-row ml-0 gap-x-8
            hover:*:text-orange-500  md:text-lg">
-            <li class="">ویدیوها</li>
-            <li class="">پشتیبانی</li>
             <li class="">
-              امور<span>&nbsp;</span>سهام
+              <NavLink to="/video">ویدیوها</NavLink>
+              </li>
+            <li class="">
+            <NavLink to="/contact"> پشتیبانی</NavLink>
+              </li>
+            <li class="">
+            <NavLink to="/investors">امور<span>&nbsp;</span>سهام </NavLink>
             </li>
             <li class="">
-              تپسی<span>&nbsp;</span>پک
+            <NavLink to="/tapsi-pack">تپسی<span>&nbsp;</span>پک</NavLink>
             </li>
             <li class="">
-              فرصت<span>&nbsp;</span>های<span>&nbsp;</span>شغلی
+            <NavLink to="/carears">فرصت<span>&nbsp;</span>های<span>&nbsp;</span>شغلی</NavLink>
             </li>
-            <li class="">وبلاگ</li>
+            <li class="">
+            <NavLink to="/blog">وبلاگ</NavLink>
+              </li>
           </ul>
           <button class="hidden w-38 h-[38px] mr-6 bg-[#FF5B35] rounded-md hover:scale-95
            transition ease-in duration-300 lg:inline-block">
