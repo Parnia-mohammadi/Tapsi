@@ -1,16 +1,16 @@
 // import { ArrowDownIcon } from "@heroicons/react/24/solid";
 function Banner() {
   return (
-    <div class="relative w-full h-[78vh] box-border">
-      <img
+    <div class="flex flex-row relative justify-center w-full box-border bg-[url(../src/assets/banner-mobile.jpg)]
+    md:bg-[url(../src/assets/banner.jpg)] bg-cover md:justify-start">
+      {/* <img
         src="../src/assets/banner.jpg"
         alt="banner of tapsi"
         class="h-full w-full object-cover absolute top-0 z-0"
-      />
+      /> */}
       <div
         class="bg-indigo-950/30 text-white z-10 rounded-2xl px-8 py-[14px] 
-      w-[18rem] my-0 absolute bottom-1/2 right-1/2 translate-y-1/2 translate-x-1/2
-      md:w-120 md:right-[10%] md:translate-x-0"
+      w-[18rem] my-8 md:mr-[10%] md:w-120"
       >
         <p class="text-3xl md:text-5xl leading-10">تپسی</p>
         <p class="text-lg md:text-2xl leading-10">
@@ -46,7 +46,7 @@ function Banner() {
         src="../src/assets/tapsi-app.jpg"
         alt="tapsi-app"
         class="hidden z-10 lg:block w-40 rounded-lg
-      absolute left-[15%] -bottom-[10%] shadow-right "
+      absolute left-[15%] -bottom-[25%] shadow-right "
       />
     </div>
   );
