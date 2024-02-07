@@ -8,7 +8,7 @@ function Banner() {
         class="h-full w-full object-cover absolute top-0 z-0"
       />
       <div
-        class="bg-indigo-950/30 text-white z-10 border-transparent rounded-2xl px-8 py-[14px] 
+        class="bg-indigo-950/30 text-white z-10 rounded-2xl px-8 py-[14px] 
       w-[18rem] my-0 absolute bottom-1/2 right-1/2 translate-y-1/2 translate-x-1/2
       md:w-120 md:right-[10%] md:translate-x-0"
       >
@@ -22,23 +22,23 @@ function Banner() {
         >
           <button class="bg-white text-black">
             <img src="../src/assets/ic-passenger-download.svg" alt="app" />
-            <a href="#">دانلود اپلیکیشن مسافران</a>
+            <a href="https://tapsi.ir/passengers/dl">دانلود اپلیکیشن مسافران</a>
           </button>
           <button class="bg-white text-black">
             <img src="../src/assets/ic-pwa.svg" alt="pwa" />
-            وب اپلیکیشن مسافران
+            <a href="https://app.tapsi.cab/">وب اپلیکیشن مسافران</a>
           </button>
           <button>
             <img src="../src/assets/ic-driver-join.svg" alt="car" />
-            ثبت نام راننده خودرو
+            <a href="https://join.tapsi.cab/login">ثبت نام راننده خودرو</a>
           </button>
           <button>
             <img src="../src/assets/ic-biker-join.svg" alt="bike" />
-            ثبت نام راننده موتور
+            <a href="https://campaigns.tapsi.ir/biker/join">ثبت نام راننده موتور</a>            
           </button>
           <button class="md:grid-cols-subgrid md:col-span-2 md:mx-[25%]">
             <img src="../src/assets/ic-driver.svg" alt="app2" />
-            دانلود اپلیکیشن رانندگان
+            <a href="https://tapsi.ir/drivers/dl">دانلود اپلیکیشن رانندگان</a>            
           </button>
         </div>
       </div>

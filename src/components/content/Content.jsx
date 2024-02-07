@@ -37,8 +37,8 @@ function ContentFile({ data, children }) {
             key={item.key}
             class={`flex ${
               item.key == 1
-                ? "md:flex-row-reverse mt-0 pb-[10%]"
-                : "md:flex-row mb-0 pt-[10%] pb-[8%] "
+                ? "md:flex-row-reverse mt-0 pb-[6%]"
+                : "md:flex-row mb-0 pt-[5%] pb-0 "
             } flex-col gap-x-20 items-center px-[6%] md:px-[10%] md:justify-between lg:items-start"`}
           >
             <div class="md:w-1/2">
@@ -65,7 +65,4 @@ function ContentFile({ data, children }) {
       })}
     </div>
   );
-}
-function ContentBanner() {
-  return <div>ContentBanner</div>;
 }

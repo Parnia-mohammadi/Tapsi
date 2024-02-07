@@ -2,7 +2,7 @@ import { blogNews } from "../../Data/BlogNewsData";
 
 function BlogNews() {
   return (
-    <div class="mt-20 px-[6%] md:px-[10%]">
+    <div class="mt-8 md:mt-20 px-[6%] md:px-[10%]">
       <p class="text-[22px] mb-10 md:text-4xl md:mb-16 font-bold">تازه ترین های وبلاگ تپسی</p>
       <div class="flex flex-col gap-4 mb-20 justify-between md:flex-row">
         {blogNews.map((item) => {
