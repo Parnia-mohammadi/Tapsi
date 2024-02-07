@@ -8,19 +8,13 @@ import Carears from "./components/Header/Carears";
 import Blog from "./components/Header/Blog";
 import { Route, Routes } from "react-router-dom";
 import AppLayer from "./components/AppLayer";
-import { useState } from "react";
 
 function App() {
-  // for changing heroicons and showing drop down navbar
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const handleNavbar = () => {
-    setIsNavOpen((is) => !is);
-  };
   return (
     <div class="font-body">
       <Routes>
-        <Route path="/" element={<AppLayer isNavOpen={isNavOpen} handleNavbar={handleNavbar}/>}>
-          <Route index element={<Home isNavOpen={isNavOpen}/>}/>
+        <Route path="/" element={<AppLayer/>}>
+          <Route index element={<Home />}/>
           <Route path="video" element={<Video />} />
           <Route path="contact" element={<Contact />} />
           {/* <Route path="/investors/landing" element={<Investors />} />

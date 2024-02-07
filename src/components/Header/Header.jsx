@@ -1,10 +1,16 @@
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { createContext, useContext, useState } from "react";
+import { useState } from "react";
 import {NavLink} from "react-router-dom";
 
-function Header({isNavOpen, handleNavbar}) {
+function Header() {
   const hamburgerClass =
     "w-6 h-2 bg-black transform transition duration-500 ease-in-out";
+  // for changing heroicons and showing drop down navbar
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const handleNavbar = () => {
+    setIsNavOpen((is) => !is);
+  };
   return (
     <div class="sticky top-0 border-b-2 border-gray-200">
       <div class="bg-[#f8f8f8] m-0 h-16 px-[10%] grid grid-cols-10 grid-rows-1 gap-4 items-center">
@@ -73,6 +79,28 @@ function Header({isNavOpen, handleNavbar}) {
             </a>
           </button>
         </div>
+      </div>
+      <div
+        class={`${
+          isNavOpen
+            ? "bg-white w-full sticky top-16 z-20 md:hidden"
+            : "hidden"
+        }`}
+      >
+        <ul class="text-base text-gray-600 flex flex-col gap-y-4 p-4  hover:*:text-orange-500">
+          <li class="">ویدیوها</li>
+          <li class="">پشتیبانی</li>
+          <li class="">
+            امور<span>&nbsp;</span>سهام
+          </li>
+          <li class="">
+            تپسی<span>&nbsp;</span>پک
+          </li>
+          <li class="">
+            فرصت<span>&nbsp;</span>های<span>&nbsp;</span>شغلی
+          </li>
+          <li class="">وبلاگ</li>
+        </ul>
       </div>
     </div>
   );

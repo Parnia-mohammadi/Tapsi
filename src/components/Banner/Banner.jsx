@@ -1,5 +1,5 @@
 // import { ArrowDownIcon } from "@heroicons/react/24/solid";
-function Banner({ isNavOpen }) {
+function Banner() {
   return (
     <div class="relative w-full h-[78vh] box-border">
       <img
@@ -48,28 +48,6 @@ function Banner({ isNavOpen }) {
         class="hidden z-10 lg:block w-40 rounded-lg
       absolute left-[15%] -bottom-[10%] shadow-right "
       />
-      <div
-        class={`${
-          isNavOpen
-            ? "bg-white w-full absolute top-0 z-20 md:hidden"
-            : "hidden"
-        }`}
-      >
-        <ul class="text-base text-gray-600 flex flex-col gap-y-4 p-4  hover:*:text-orange-500">
-          <li class="">ویدیوها</li>
-          <li class="">پشتیبانی</li>
-          <li class="">
-            امور<span>&nbsp;</span>سهام
-          </li>
-          <li class="">
-            تپسی<span>&nbsp;</span>پک
-          </li>
-          <li class="">
-            فرصت<span>&nbsp;</span>های<span>&nbsp;</span>شغلی
-          </li>
-          <li class="">وبلاگ</li>
-        </ul>
-      </div>
     </div>
   );
 }
