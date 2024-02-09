@@ -3,7 +3,7 @@ import { dataService } from "../../Data/Data";
 
 function TapsiService() {
   return (
-    <div class="px-[6%] mt-12 md:px-[10%] md:mt-36 lg:mt-40">
+    <div class="px-[6%] mt-12 md:px-[10%] md:mt-30 lg:mt-40">
       <p class="text-2xl font-bold mb-8 md:mb-16 md:text-4xl">سرویس های تپسی</p>
       <Service />
     </div>
@@ -15,7 +15,8 @@ export default TapsiService;
 function Service() {
   const [serviceType, setServiceType] = useState(0);
   const intervalRef = useRef();
-  const data = (serviceType>6) ? dataService[serviceType-1]: dataService[serviceType];
+  const data =
+    serviceType > 6 ? dataService[serviceType - 1] : dataService[serviceType];
   //changing service type
   useEffect(() => {
     if (serviceType > 6) {

@@ -1,16 +1,16 @@
 // import { ArrowDownIcon } from "@heroicons/react/24/solid";
-function Banner({ isNavOpen }) {
+function Banner() {
   return (
-    <div class="relative w-full h-[78vh] box-border">
-      <img
+    <div class="flex flex-row relative justify-center w-full box-border bg-[url(../src/assets/banner-mobile.jpg)]
+    md:bg-[url(../src/assets/banner.jpg)] bg-cover md:justify-start">
+      {/* <img
         src="../src/assets/banner.jpg"
         alt="banner of tapsi"
         class="h-full w-full object-cover absolute top-0 z-0"
-      />
+      /> */}
       <div
-        class="bg-indigo-950/30 text-white z-10 border-transparent rounded-2xl px-8 py-[14px] 
-      w-[18rem] my-0 absolute bottom-1/2 right-1/2 translate-y-1/2 translate-x-1/2
-      md:w-120 md:right-[10%] md:translate-x-0"
+        class="bg-indigo-950/30 text-white z-10 rounded-2xl px-8 py-[14px] 
+      w-[18rem] my-8 md:mr-[10%] md:w-120"
       >
         <p class="text-3xl md:text-5xl leading-10">تپسی</p>
         <p class="text-lg md:text-2xl leading-10">
@@ -22,23 +22,23 @@ function Banner({ isNavOpen }) {
         >
           <button class="bg-white text-black">
             <img src="../src/assets/ic-passenger-download.svg" alt="app" />
-            <a href="#">دانلود اپلیکیشن مسافران</a>
+            <a href="https://tapsi.ir/passengers/dl">دانلود اپلیکیشن مسافران</a>
           </button>
           <button class="bg-white text-black">
             <img src="../src/assets/ic-pwa.svg" alt="pwa" />
-            وب اپلیکیشن مسافران
+            <a href="https://app.tapsi.cab/">وب اپلیکیشن مسافران</a>
           </button>
           <button>
             <img src="../src/assets/ic-driver-join.svg" alt="car" />
-            ثبت نام راننده خودرو
+            <a href="https://join.tapsi.cab/login">ثبت نام راننده خودرو</a>
           </button>
           <button>
             <img src="../src/assets/ic-biker-join.svg" alt="bike" />
-            ثبت نام راننده موتور
+            <a href="https://campaigns.tapsi.ir/biker/join">ثبت نام راننده موتور</a>            
           </button>
           <button class="md:grid-cols-subgrid md:col-span-2 md:mx-[25%]">
             <img src="../src/assets/ic-driver.svg" alt="app2" />
-            دانلود اپلیکیشن رانندگان
+            <a href="https://tapsi.ir/drivers/dl">دانلود اپلیکیشن رانندگان</a>            
           </button>
         </div>
       </div>
@@ -46,30 +46,8 @@ function Banner({ isNavOpen }) {
         src="../src/assets/tapsi-app.jpg"
         alt="tapsi-app"
         class="hidden z-10 lg:block w-40 rounded-lg
-      absolute left-[15%] -bottom-[10%] shadow-right "
+      absolute left-[15%] -bottom-[25%] shadow-right "
       />
-      <div
-        class={`${
-          isNavOpen
-            ? "bg-white w-full absolute top-0 z-20 border-gray-200 border-t-[1px] md:hidden"
-            : "hidden"
-        }`}
-      >
-        <ul class="text-base text-gray-600 flex flex-col gap-y-4 p-4  hover:*:text-orange-500">
-          <li class="">ویدیوها</li>
-          <li class="">پشتیبانی</li>
-          <li class="">
-            امور<span>&nbsp;</span>سهام
-          </li>
-          <li class="">
-            تپسی<span>&nbsp;</span>پک
-          </li>
-          <li class="">
-            فرصت<span>&nbsp;</span>های<span>&nbsp;</span>شغلی
-          </li>
-          <li class="">وبلاگ</li>
-        </ul>
-      </div>
     </div>
   );
 }
